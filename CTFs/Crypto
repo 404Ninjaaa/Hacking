@@ -3,4 +3,111 @@
 Resources
 https://hacktricks.boitatech.com.br/cryptography/crypto-ctfs-tricks
 
+Youtube
+https://youtu.be/4zahvcJ9glg?si=lFSiuJDSYV6mvPOJ
+https://youtu.be/_lg2AEqRTjg?si=LEqu31bmhsj-167s
+
+Sites
+https://factordb.com/
+
+
+if p == q:
+  phi = p * (p - 1)
+else:
+  phi = (p - 1) * (q - 1)
+d = inverse(e,phi)
+m = pow( c, d, n )
+
 ======================================================================================================================================
+
+Rsa
+
+🧠 RSA = Rivest–Shamir–Adleman
+RSA is one of the most important asymmetric encryption systems — meaning it uses a public key to encrypt and a private key to decrypt.
+
+
+n	==> The modulus — product of two big prime numbers p * q
+e	==> Public exponent (often 65537, sometimes small like 3)
+d	==> Private exponent — used to decrypt
+ct ==> Ciphertext — encrypted message
+pt ==> Plaintext — original message
+φ(n) ==> Euler’s totient: (p-1)*(q-1), needed to compute d
+d = e⁻¹ mod φ(n)	The modular inverse of e mod φ(n)
+
+🔒 Encryption:
+ct = pt^e mod n
+
+🔓 Decryption:
+pt = ct^d mod n
+
+
+🎯 Real World RSA Decryption Plan
+🧮 Factor n → get p and q
+🧠 Compute φ(n) = (p-1)(q-1)
+🔑 Compute private key d = inverse(e, φ(n))
+🔓 Decrypt: pt = ct^d mod n
+📦 Convert pt to ASCII (e.g., using long_to_bytes)
+
+======================================================================================================================================
+
+Challenge 1: Tiny RSA
+n = 3233
+e = 17
+ct = 2790
+
+✅ Step 1: Factor n
+Find two primes p and q such that:
+p * q = 3233
+Try dividing 3233 by small prime numbers (start with 2, 3, 5, 7, ...), or use this trick:
+Try: 61 × 53 = 3233 ✅
+So:
+p = 61
+q = 53
+
+✅ Step 2: Compute φ(n)
+φ(n) = (p - 1)(q - 1)
+     = (61 - 1)(53 - 1)
+     = 60 × 52 = 3120
+
+✅ Step 3: Compute private key d
+d = inverse(e, φ(n)) = inverse(17, 3120)
+We can use Python:
+from Crypto.Util.number import inverse
+d = inverse(17, 3120)
+print(d)  # Output should be 2753
+So:
+d = 2753
+
+✅ Step 4: Decrypt
+Now:
+pt = ct^d mod n
+   = 2790^2753 mod 3233
+Use Python:
+pt = pow(2790, 2753, 3233)
+print(pt)  # Output should be 65
+
+✅ Step 5: Convert to Message
+pt = 65
+Convert to ASCII:
+chr(65) = 'A'
+
+🏁 Final Answer:
+🎉 Plaintext = 'A'
+
+======================================================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
