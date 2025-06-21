@@ -1,0 +1,33 @@
+Misc
+
+<string>(1)<module>()->None
+(Pdb) import os; os.system("sh”)
+
+https://ctfsearch.hackmap.win/?q=misc
+
+
+https://7rocky.github.io/en/ctf/htb-challenges/misc/
+
+
+https://medium.com/@devsharmaCTF/nullcon-hackim-ctf-goa-2025-cracking-the-misc-challenges-f00ffaa7e191
+
+strings “file_name.png” ==> extracts readable ASCII text from the file.
+exiftool “file_name.png” ==> extract metadata from images.
+zsteg -a “file_name.png” ==> A great tool for detecting LSB-based steganography in PNG images
+
+Understanding USB Packets
+URB_BULK in ==> transferring large amounts of data from the USB device to the host.
+URB_BULK out ==> send large amounts of data from the host to the USB device.
+URB_INTERRUPT in ==> used for small, time-sensitive data transfers. They are often seen in devices like keyboards and mice, which frequently send data when an action occurs (e.g., a keypress).
+
+
+Filters for wireshark
+_ws.col.info == “URB_BULK in”
+_ws.col.info == “URB_BULK out”
+_ws.col.info == “URB_INTERRUPT in”
+
+
+foremost -i “file_name.pcapng” -o “directory name” ==> foremost, a forensic tool designed to recover hidden files from raw data.
+
+
+
