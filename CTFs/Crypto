@@ -10,6 +10,20 @@ https://youtu.be/_lg2AEqRTjg?si=LEqu31bmhsj-167s
 Sites
 https://factordb.com/
 
+Crypto
+https://ctfsearch.hackmap.win/?q=crypto
+https://shamsher-khan-404.medium.com/hashing-crypto-101-tryhackme-writeup-a95bfa23e81e
+
+https://youtu.be/B2A2pGrDG8I?si=L5nK0jSBL1DImXtc
+
+https://youtu.be/ofTb57aZHZs?si=GkEp0LeT9QnYg0f-
+
+https://github.com/RsaCtfTool/RsaCtfTool
+
+https://youtu.be/8Tr2aj6JETg?si=qcWMzN9yWVYLIVp9
+
+
+======================================================================================================================================
 
 if p == q:
   phi = p * (p - 1)
@@ -17,8 +31,6 @@ else:
   phi = (p - 1) * (q - 1)
 d = inverse(e,phi)
 m = pow( c, d, n )
-
-======================================================================================================================================
 
 Rsa
 
