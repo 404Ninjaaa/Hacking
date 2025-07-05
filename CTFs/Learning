@@ -120,3 +120,47 @@ dirtycow2
 
 
 
+https://youtu.be/Aha7JWSIfSI?si=vqD2wC8VBtv7bJIM
+
+Raven1 VulnHub CTF Walkthrough - Boot-To-Root
+
+============================== Learned ==============================
+
+https://github.com/SabyasachiRana/WebMap.git
+
+wget https://github.com/rebootuser/LinEnum.git
+In target machine
+
+For Wordpress every Wordpress installation need database]
+
+ls -lah /var/www
+
+mysql -u -p wordpress
+
+https://rutube.ru/video/018bbd2b4ab067598d5c64dc9e2d2154/
+
+
+
+
+Toppo VulnHub CTF Walkthrough - Boot-To-Root
+
+============================== Learned ==============================
+
+https://youtu.be/TQvsSW9Is3A?si=DRuyQxsSvcqN971C
+
+cat /etc/issue
+
+https://github.com/The-Z-Labs/linux-exploit-suggester
+
+wget https://raw.githubusercontent.com/mzet-/linux-exploit-suggester/master/linux-exploit-suggester.sh -O les.sh
+
+find / -perm -u=s -type f 2>/dev/null
+
+
+wget https://raw.githubusercontent.com/mzet-/linux-exploit-suggester/master/linux-exploit-suggester.sh -O les.sh
+
+
+
+
+
+
